@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Penulis - Elantara</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <section class="form-container">
+        <div class="container">
+            <h2>Login Penulis</h2>
+            <form onsubmit="return loginUser()">
+                <label>Nama Pengguna:</label>
+                <input type="text" id="username" required>
+
+                <label>Kata Sandi:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function loginUser() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            if (user === "admin" && pass === "elantara123") {
+                localStorage.setItem("loggedIn", "true");
+                alert("Login berhasil!");
+                window.location.href = "{{ url_for('tulis') }}";
+            } else {
+                alert("Login gagal. Coba lagi.");
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

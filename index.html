@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elantara - Cerita Tanpa Batas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo_elantara.png') }}" alt="Logo Elantara" class="logo-img">
+                <span>Elantara</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('tulis') }}">Tulis Artikel</a></li>
+                <li><a href="{{ url_for('index') }}">Beranda</a></li>
+                <li><a href="#">Opini</a></li>
+                <li><a href="#">Isu Sosial dan Keadilan</a></li>
+                <li><a href="#">Pembangunan</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Terus Bersuara</h2>
+            <p>Menggali Isu Sosial, Meretas Jalan Keadilan, Mengawal Pembangunan, Mengembangkan Pertanian Demi Bersama Kita Sejahtera</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Elantara. Dibuat oleh Riswanto</p>
+        </div>
+    </footer>
+</body>
+</html>
